@@ -1,0 +1,74 @@
+/* Contenedor de las pestañas con desplazamiento horizontal */
+.coop1504-tabs {
+    overflow-x: auto; /* Habilita el desplazamiento horizontal */
+    overflow-y: hidden; /* Evita el desplazamiento vertical */
+    white-space: nowrap; /* Asegura que las pestañas se muestren en una sola línea */
+    background-color: #f1f1f1;
+    text-align: center;
+}
+
+.coop1504-tablinks {
+    background-color: inherit;
+    display: inline-block; /* Cambio de float a display inline-block para el scroll horizontal */
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 20px;
+    transition: 0.3s;
+    font-size: 17px;
+    box-sizing: border-box;
+}
+
+.coop1504-tabcontent {
+    display: none;
+    padding: 20px;
+    border: none; /* Eliminado el borde como solicitado */
+    text-align: center;
+    margin: 0 auto;
+    width: 50%; /* Ocupa la mitad de la pantalla */
+    max-height: 500px; /* Establece un tamaño máximo para el contenido */
+    overflow-y: auto; /* Habilita el desplazamiento si el contenido excede el tamaño máximo */
+    box-sizing: border-box;
+}
+
+.coop1504-tablinks.active, .coop1504-tablinks:focus {
+    background-color: #ccc;
+}
+
+@media screen and (max-width: 600px) {
+    .coop1504-tablinks, .coop1504-tabcontent {
+        width: 100%;
+    }
+    .coop1504-tablinks {
+        padding: 10px;
+    }
+}
+
+
+.coop1504-tab-scroll {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.coop1504-tabs {
+    overflow-x: hidden;
+    display: flex;
+    flex-wrap: nowrap;
+    scroll-behavior: smooth;
+}
+
+.coop1504-scroll-btn {
+    cursor: pointer;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border: none;
+}
+
+.coop1504-scroll-btn.left {
+    margin-right: 5px;
+}
+
+.coop1504-scroll-btn.right {
+    margin-left: 5px;
+}
